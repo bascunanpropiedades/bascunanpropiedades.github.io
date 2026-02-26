@@ -195,4 +195,33 @@ window.addEventListener('resize', () => {
 
 // Console greeting
 console.log('%c🏠 Bascuñan Propiedades', 'font-size: 20px; font-weight: bold; color: #0f172a;');
+
 console.log('%c¿Buscas vender o arrendar en Chillán? ¡Contáctanos!', 'font-size: 14px; color: #64748b;');
+// Property image carousel
+const propertyImages = {
+    prop1: [
+        "assets/img/propiedades/casa1/1.jpg",
+        "assets/img/propiedades/casa1/2.jpg",
+        "assets/img/propiedades/casa1/3.jpg"
+    ]
+};
+
+let propertyIndex = {
+    prop1: 0
+};
+
+function nextImage(id) {
+    propertyIndex[id]++;
+    if (propertyIndex[id] >= propertyImages[id].length) {
+        propertyIndex[id] = 0;
+    }
+    document.getElementById(id).src = propertyImages[id][propertyIndex[id]];
+}
+
+function prevImage(id) {
+    propertyIndex[id]--;
+    if (propertyIndex[id] < 0) {
+        propertyIndex[id] = propertyImages[id].length - 1;
+    }
+    document.getElementById(id).src = propertyImages[id][propertyIndex[id]];
+}
