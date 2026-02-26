@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Corredora de propiedades en Chillán. Especialistas en venta y arriendo de casas, departamentos y parcelas. Tasación gratuita y atención personalizada.">
+    <meta name="keywords" content="corredora propiedades chillán, vender casa chillán, arriendo chillán, casas en venta chillán, bascuñan propiedades">
+    <title>Bascuñan Propiedades | Corredora de Propiedades en Chillán</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        whatsapp: '#25D366',
+                        whatsappHover: '#128C7E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Placeholder para el logo - Reemplazar src con tu logo -->
+                    <div class="w-12 h-12 flex items-center justify-center">
+    <img src="logobp.png" alt="Logo Bascuñan Propiedades" class="w-12 h-12 object-contain">
+</div>
+                    <div class="hidden sm:block">
+                        <h1 class="font-serif text-xl font-bold text-slate-900 leading-tight">Bascuñan Propiedades</h1>
+                        <p class="text-xs text-slate-500 tracking-wider uppercase">Agente inmobiliario</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#propiedades" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Propiedades</a>
+                    <a href="#servicios" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Nosotros</a>
+                    <a href="https://wa.me/56982146977" target="_blank" class="bg-slate-900 text-white px-6 py-3 rounded-full font-medium hover:bg-slate-800 transition-all transform hover:scale-105 flex items-center gap-2 shadow-lg">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#propiedades" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Propiedades</a>
+                <a href="#servicios" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Servicios</a>
+                <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Nosotros</a>
+                <a href="https://wa.me/56982146977" target="_blank" class="block px-3 py-3 text-base font-medium text-whatsapp hover:text-whatsappHover bg-green-50 rounded-md mt-4 flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Escribir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-50">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-100 via-white to-slate-100 opacity-90"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-slate-200/30 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 shadow-sm mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-slate-600">Disponibilidad inmediata en Chillán</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                        Maximiza el valor de tu propiedad con una gestión profesional y sin complicaciones.
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
+                        Te acompañamos en cada etapa del proceso, desde la tasación hasta la firma, conectando tu propiedad con compradores serios y asegurando una negociación transparente y segura.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/56982146977" target="_blank" class="inline-flex items-center justify-center gap-2 bg-whatsapp text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-whatsappHover transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Quiero vender mi casa
+                        </a>
+                        <a href="#propiedades" class="inline-flex items-center justify-center gap-2 bg-white text-slate-900 border-2 border-slate-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-slate-900 hover:text-white transition-all">
+                            Ver propiedades disponibles
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative lg:h-[600px] fade-in-up delay-200">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-200 to-slate-100 rounded-3xl transform rotate-3 opacity-50"></div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Catedral_de_Chill%C3%A1n_sin_antenas.jpg" alt="Casa elegante en Chillán" class="relative rounded-3xl shadow-2xl w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-500">
+                    
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs fade-in-up delay-500">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">Valorización garantizada</p>
+                                <p class="text-xs text-slate-500">Tasación profesional</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600">Obtén hasta un 15% más por tu propiedad con nuestra estrategia de marketing digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Asesoría 100% Personalizada</p>
+                    <p class="text-sm text-slate-500 mt-1">Cada propiedad recibe atención exclusiva y estrategia a medida.</p>
+                </div>
+                <div class="reveal delay-100">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Marketing Digital Activo</p>
+                    <p class="text-sm text-slate-500 mt-1">Publicación en portales + redes sociales desde el día 1.</p>
+                </div>
+                <div class="reveal delay-200">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Gestión Legal Segura</p>
+                    <p class="text-sm text-slate-500 mt-1">Revisión de antecedentes y acompañamiento hasta la firma.</p>
+                </div>
+                <div class="reveal delay-300">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Disponibilidad Directa</p>
+                    <p class="text-sm text-slate-500 mt-1">Contacto inmediato por WhatsApp, sin intermediarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 lg:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Servicios integrales para tu tranquilidad</h2>
+                <p class="text-lg text-slate-600">Ya sea que busques vender, arrendar o comprar, te acompañamos en cada paso del proceso con profesionalismo y transparencia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Venta -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal">
+                    <div class="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="home" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Venta de Propiedades</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Estrategia de marketing digital personalizada, fotografía profesional y negociación experta para maximizar el valor de tu propiedad.</p>
+                    <a href="https://wa.me/56982146977?text=Hola,%20quiero%20vender%20mi%20propiedad%20en%20Chillán" target="_blank" class="inline-flex items-center text-slate-900 font-semibold hover:text-whatsapp transition-colors gap-2">
+                        Vender mi propiedad <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Arriendo -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal delay-100">
+                    <div class="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="key" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Arriendo Seguro</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Conectamos propietarios con arrendatarios confiables. Gestión completa: contratos, garantías y seguimiento mensual.</p>
+                    <a href="https://wa.me/56982146977?text=Hola,%20estoy%20buscando%20arrendar%20una%20propiedad%20en%20Chillán" target="_blank" class="inline-flex items-center text-slate-900 font-semibold hover:text-whatsapp transition-colors gap-2">
+                        Ver opciones de arriendo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Tasación -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal delay-200">
+                    <div class="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clipboard-check" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Tasamos tu propiedad</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">¿No sabes cuánto vale tu propiedad? Te entregamos un informe profesional del valor de mercado.</p>
+                    <a href="https://wa.me/56982146977?text=Hola,%20quiero%20una%20tasación%20gratuita%20de%20mi%20propiedad" target="_blank" class="inline-flex items-center text-slate-900 font-semibold hover:text-whatsapp transition-colors gap-2">
+                        Solicitar tasación <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="propiedades" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
+                <div class="reveal">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-2">Propiedades destacadas</h2>
+                    <p class="text-slate-600">Selección exclusiva de casas y departamentos en Chillán y alrededores</p>
+                </div>
+                <div class="flex gap-2 reveal">
+                    <button onclick="filterProperties('all')" class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all border border-slate-200" data-filter="all">Todas</button>
+                    <button onclick="filterProperties('venta')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all border border-slate-200 hover:bg-slate-50" data-filter="venta">Venta (UF)</button>
+                    <button onclick="filterProperties('arriendo')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all border border-slate-200 hover:bg-slate-50" data-filter="arriendo">Arriendo (CLP)</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="properties-grid">
+                
+                <!-- Propiedad 1: Venta -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="venta">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/house/640x480/201" alt="Casa Las Mariposas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">2.450 UF</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Las Mariposas, Chillán</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 4D 3B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 140m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Las%20Mariposas%20de%202.450%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 2: Arriendo -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-100" data-type="arriendo">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/apartment/640x480/302" alt="Departamento Centro" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000 CLP</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Centro Chillán</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Departamento Céntrico 2D 2B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 65m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20el%20departamento%20en%20Centro%20Chillán%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 3: Venta -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-200" data-type="venta">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/house/640x480/403" alt="Casa Chillán Viejo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">3.200 UF</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Chillán Viejo</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Familiar Amplia 5D 3B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 5</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 180m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Chillán%20Viejo%20de%203.200%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 4: Arriendo -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="arriendo">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/house/640x480/504" alt="Casa Colón" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$380.000 CLP</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Colón, Chillán</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Acogedora 3D 2B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 95m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Colón%20de%20$380.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 5: Venta -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-100" data-type="venta">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/house/640x480/605" alt="Casa Mañío" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">1.890 UF</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Mañío, Chillán</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Nueva 3D 2B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 110m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Mañío%20de%201.890%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 6: Arriendo -->
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-200" data-type="arriendo">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.photos/house/640x480/706" alt="Casa El Roble" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$520.000 CLP</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>El Roble, Chillán</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Amplia Casa Familiar 4D 3B</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 130m²</span>
+                        </div>
+                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20El%20Roble%20de%20$520.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center reveal">
+                <a href="https://wa.me/56982146977?text=Hola,%20quiero%20ver%20más%20propiedades%20disponibles" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl">
+                    Ver todas las propiedades disponibles
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="nosotros" class="py-20 lg:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-6">¿Por qué elegir Bascuñan Propiedades?</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Conocemos cada rincón de Chillán y las Ñuble. Nuestro compromiso es ofrecerte un servicio transparente, profesional y eficiente, donde tu tranquilidad y beneficio económico son nuestra prioridad.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-slate-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Seguridad jurídica garantizada</h4>
+                                <p class="text-slate-600 text-sm">Revisamos todos los documentos y antecedentes comerciales para una transacción 100% segura.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="zap" class="w-6 h-6 text-slate-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Marketing digital agresivo</h4>
+                                <p class="text-slate-600 text-sm">Tu propiedad expuesta en los principales portales inmobiliarios y redes sociales desde el día 1.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart-handshake" class="w-6 h-6 text-slate-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Atención personalizada</h4>
+                                <p class="text-slate-600 text-sm">Estamos disponibles para ti en todo momento, porque sabemos que vender o comprar una casa no tiene horario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative reveal delay-200">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-200 to-slate-100 rounded-3xl transform -rotate-3"></div>
+                    <img src="https://vyk.cl/wp-content/uploads/2022/07/real-estate-agent-1024x682-1.jpg" alt="Oficina Bascuñan Propiedades" class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]">
+                    
+                    <!-- Testimonial Card -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl max-w-sm fade-in-up delay-500">
+                        <div class="flex items-center gap-1 mb-3">
+                        </div>
+                        <p class="text-slate-700 mb-4 text-sm italic">Nuestro compromiso es vender tu propiedad al mejor precio posible, con transparencia y asesoría en cada etapa.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-xs font-bold text-slate-700">MR</div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Marcos Jara</p>
+                                <p class="text-xs text-slate-500">Corredor de propiedades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Proceso simple y transparente</h2>
+                <p class="text-lg text-slate-600">Vender o arrendar tu propiedad nunca fue tan fácil. Te acompañamos en cada paso.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -translate-y-1/2 z-0"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative z-10 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm text-center reveal">
+                    <div class="w-16 h-16 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold font-serif shadow-lg">1</div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Evaluación gratuita</h3>
+                    <p class="text-slate-600">Agendamos una visita para conocer tu propiedad y entregarte una tasación profesional del valor de mercado real.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm text-center reveal delay-100">
+                    <div class="w-16 h-16 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold font-serif shadow-lg">2</div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Marketing y exposición</h3>
+                    <p class="text-slate-600">Fotografía profesional, publicación en portales principales y difusión en nuestra base de clientes calificados.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm text-center reveal delay-200">
+                    <div class="w-16 h-16 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold font-serif shadow-lg">3</div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Cierre seguro</h3>
+                    <p class="text-slate-600">Negociamos por ti, gestionamos toda la documentación y acompañamos hasta la escritura o entrega de llaves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-32 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://static.photos/abstract/1200x630/999')] opacity-10 bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">¿Listo para dar el siguiente paso?</h2>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                Ya sea que quieras vender, arrendar o estés buscando tu nueva casa, estamos aquí para ayudarte. Contacto directo y respuesta inmediata.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/56982146977" target="_blank" class="inline-flex items-center justify-center gap-3 bg-whatsapp text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-whatsappHover transition-all transform hover:scale-105 shadow-2xl hover:shadow-green-500/30">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Escríbenos por WhatsApp
+                </a>
+                <a href="tel:+56982146977" class="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur text-white border-2 border-white/30 px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-slate-900 transition-all">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                    Llamar ahora
+                </a>
+            </div>
+            
+            <p class="mt-8 text-slate-400 text-sm">Respuesta garantizada en menos de 1 hora</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logobp.png" alt="Logo Bascuñan Propiedades" class="w-12 h-12 object-contain">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-white">Bascuñan Propiedades</h3>
+                            <p class="text-xs text-slate-500">AGENTE INMOBILIARIO</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm">
+                        Especialistas en el mercado inmobiliario de Chillán y la Región de Ñuble. Compromiso, transparencia y resultados comprobables.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#propiedades" class="hover:text-white transition-colors">Propiedades</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="https://wa.me/56982146977" target="_blank" class="hover:text-whatsapp transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Chillán, Región de Ñuble
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +56 9 8214 6977
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            contacto@bascunanpropiedades.cl
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">&copy; 2024 Bascuñan Propiedades. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-slate-800 transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-slate-800 transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/56982146977" target="_blank" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-whatsapp transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56982146977" target="_blank" class="fixed bottom-6 right-6 bg-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-whatsappHover transition-all transform hover:scale-110 z-50 animate-bounce-slow" aria-label="Contactar por WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
