@@ -65,23 +65,37 @@ function filterProperties(type) {
     const cards = document.querySelectorAll('.property-card');
     const buttons = document.querySelectorAll('.filter-btn');
     
-    // Resetear botones
-    buttons.forEach(btn => {
-        btn.classList.remove('active', 'bg-black', 'text-white');
-        btn.classList.add('bg-white', 'text-slate-700');
-    });
+    // Update active button
+buttons.forEach(btn => {
 
-    // Activar botón seleccionado
-    const activeBtn = document.querySelector(`[data-filter="${type}"]`);
-    if (activeBtn) {
-        activeBtn.classList.add('active', 'bg-black', 'text-white');
-        activeBtn.classList.remove('bg-white', 'text-slate-700');
+    btn.classList.remove(
+        'active',
+        'bg-black',
+        'text-white'
+    );
+
+    btn.classList.add(
+        'bg-white',
+        'text-slate-600'
+    );
+
+    if (btn.dataset.filter === type) {
+        btn.classList.add(
+            'active',
+            'bg-black',
+            'text-white'
+        );
+        btn.classList.remove(
+            'bg-white',
+            'text-slate-600'
+        );
     }
-
-    // Filtrar tarjetas
+});
+    
+    // Filter cards with animation
     cards.forEach((card, index) => {
         const cardType = card.dataset.type;
-
+        
         if (type === 'all' || cardType === type) {
             card.style.display = 'block';
             setTimeout(() => {
@@ -97,6 +111,7 @@ function filterProperties(type) {
         }
     });
 }
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -240,6 +255,7 @@ function prevImage(id) {
     }
     showImage(id);
 }
+
 
 
 
