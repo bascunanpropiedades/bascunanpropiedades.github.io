@@ -66,15 +66,31 @@ function filterProperties(type) {
     const buttons = document.querySelectorAll('.filter-btn');
     
     // Update active button
-    buttons.forEach(btn => {
-        if (btn.dataset.filter === type) {
-            btn.classList.add('active');
-            btn.classList.remove('bg-white', 'text-slate-600');
-        } else {
-            btn.classList.remove('active');
-            btn.classList.add('bg-white', 'text-slate-600');
-        }
-    });
+buttons.forEach(btn => {
+
+    btn.classList.remove(
+        'active',
+        'bg-black',
+        'text-white'
+    );
+
+    btn.classList.add(
+        'bg-white',
+        'text-slate-600'
+    );
+
+    if (btn.dataset.filter === type) {
+        btn.classList.add(
+            'active',
+            'bg-black',
+            'text-white'
+        );
+        btn.classList.remove(
+            'bg-white',
+            'text-slate-600'
+        );
+    }
+});
     
     // Filter cards with animation
     cards.forEach((card, index) => {
@@ -239,3 +255,4 @@ function prevImage(id) {
     }
     showImage(id);
 }
+
