@@ -65,59 +65,23 @@ function filterProperties(type) {
     const cards = document.querySelectorAll('.property-card');
     const buttons = document.querySelectorAll('.filter-btn');
     
-    // Update active button
+    // Resetear botones
     buttons.forEach(btn => {
-        if (btn.dataset.filter === type) {
-            btn.classList.add('active');
-            btn.classList.remove('bg-white', 'text-slate-600');
-        } else {
-            btn.classList.remove('active');
-            btn.classList.add('bg-white', 'text-slate-600');
-        }
+        btn.classList.remove('active', 'bg-black', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700');
     });
 
-        btn.classList.add(
-            'bg-white',
-            'text-slate-700'
-        );
-
-        // Activar el botón correcto
-        if (btn.dataset.filter === type) {
-            btn.classList.add(
-                'active',
-                'bg-black',
-                'text-white'
-            );
-
-            btn.classList.remove(
-                'bg-white',
-                'text-slate-700'
-            );
-        }
-    });
-
-    btn.classList.add(
-        'bg-white',
-        'text-slate-600'
-    );
-
-    if (btn.dataset.filter === type) {
-        btn.classList.add(
-            'active',
-            'bg-black',
-            'text-white'
-        );
-        btn.classList.remove(
-            'bg-white',
-            'text-slate-600'
-        );
+    // Activar botón seleccionado
+    const activeBtn = document.querySelector(`[data-filter="${type}"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-black', 'text-white');
+        activeBtn.classList.remove('bg-white', 'text-slate-700');
     }
-});
-    
-    // Filter cards with animation
+
+    // Filtrar tarjetas
     cards.forEach((card, index) => {
         const cardType = card.dataset.type;
-        
+
         if (type === 'all' || cardType === type) {
             card.style.display = 'block';
             setTimeout(() => {
@@ -133,7 +97,6 @@ function filterProperties(type) {
         }
     });
 }
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -277,6 +240,7 @@ function prevImage(id) {
     }
     showImage(id);
 }
+
 
 
 
