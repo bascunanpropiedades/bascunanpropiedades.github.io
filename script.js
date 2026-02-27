@@ -197,31 +197,29 @@ window.addEventListener('resize', () => {
 console.log('%c🏠 Bascuñan Propiedades', 'font-size: 20px; font-weight: bold; color: #0f172a;');
 
 console.log('%c¿Buscas vender o arrendar en Chillán? ¡Contáctanos!', 'font-size: 14px; color: #64748b;');
-// Property image carousel
+// indices actuales por propiedad
+const currentIndex = {};
+
+// rutas de imágenes por propiedad
 const propertyImages = {
-    prop1: [
-        "assets/img/propiedades/casa1/1.jpg",
-        "assets/img/propiedades/casa1/2.jpg",
-        "assets/img/propiedades/casa1/3.jpg"
-    ]
+    prop1: ['assets/img/propiedades/casa1/1.jpg','assets/img/propiedades/casa1/2.jpg','assets/img/propiedades/casa1/3.jpg'], // venta
+    prop2: ['assets/img/propiedades/casa2/1.jpg','assets/img/propiedades/casa2/2.jpg','assets/img/propiedades/casa2/3.jpg'], // arriendo
+    prop3: ['assets/img/propiedades/casa3/1.jpg','assets/img/propiedades/casa3/2.jpg','assets/img/propiedades/casa3/3.jpg'], // arriendo
+    prop4: ['assets/img/propiedades/casa4/1.jpg','assets/img/propiedades/casa4/2.jpg','assets/img/propiedades/casa4/3.jpg'], // arriendo
+    prop5: ['assets/img/propiedades/casa5/1.jpg','assets/img/propiedades/casa5/2.jpg','assets/img/propiedades/casa5/3.jpg']  // venta
 };
 
-let propertyIndex = {
-    prop1: 0
-};
-
+// funciones del carrusel
 function nextImage(id) {
-    propertyIndex[id]++;
-    if (propertyIndex[id] >= propertyImages[id].length) {
-        propertyIndex[id] = 0;
-    }
-    document.getElementById(id).src = propertyImages[id][propertyIndex[id]];
+    if (!currentIndex[id]) currentIndex[id] = 0;
+    const images = propertyImages[id];
+    currentIndex[id] = (currentIndex[id] + 1) % images.length;
+    document.getElementById(id).src = images[currentIndex[id]];
 }
 
 function prevImage(id) {
-    propertyIndex[id]--;
-    if (propertyIndex[id] < 0) {
-        propertyIndex[id] = propertyImages[id].length - 1;
-    }
-    document.getElementById(id).src = propertyImages[id][propertyIndex[id]];
+    if (!currentIndex[id]) currentIndex[id] = 0;
+    const images = propertyImages[id];
+    currentIndex[id] = (currentIndex[id] - 1 + images.length) % images.length;
+    document.getElementById(id).src = images[currentIndex[id]];
 }
