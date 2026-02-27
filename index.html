@@ -243,174 +243,147 @@
                 
                 <!-- Propiedad 1: Venta -->
                 <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="venta">
-                    <div class="relative h-64 overflow-hidden">
-    
-    <!-- Imagen -->
-    <img id="prop1"
-         src="assets/img/propiedades/casa1/1.jpg"
-         alt="Casa Las Mariposas"
-         class="w-full h-full object-cover transition-transform duration-700">
-
-    <!-- Botón izquierda -->
-    <button onclick="prevImage('prop1')"
-        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">
-        ‹
-    </button>
-
-    <!-- Botón derecha -->
-    <button onclick="nextImage('prop1')"
-        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">
-        ›
-    </button>
-
-    <!-- Badge venta -->
-    <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-        Venta
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop1" src="assets/img/propiedades/casa1/1.jpg" alt="Casa Las Mariposas" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop1')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop1')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">2.450 UF</div>
     </div>
-
-    <!-- Precio -->
-    <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">
-        2.450 UF
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Las Mariposas, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 4D 3B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 140m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Las%20Mariposas%20de%202.450%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
     </div>
-
 </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Las Mariposas, Chillán</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 4D 3B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 140m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Las%20Mariposas%20de%202.450%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
 
                 <!-- Propiedad 2: Arriendo -->
-                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-100" data-type="arriendo">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.photos/apartment/640x480/302" alt="Departamento Centro" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000 CLP</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Centro Chillán</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Departamento Céntrico 2D 2B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 2</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 65m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20el%20departamento%20en%20Centro%20Chillán%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="arriendo">
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop2" src="assets/img/propiedades/casa2/1.jpg" alt="Casa Los Robles" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop2')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop2')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000</div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Los Robles, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 3D 2B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 120m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Los%20Robles%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
+    </div>
+</div>
 
                 <!-- Propiedad 3: Venta -->
-                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-200" data-type="venta">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.photos/house/640x480/403" alt="Casa Chillán Viejo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">3.200 UF</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Chillán Viejo</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Familiar Amplia 5D 3B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 5</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 180m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Chillán%20Viejo%20de%203.200%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="arriendo">
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop3" src="assets/img/propiedades/casa3/1.jpg" alt="Casa Los Robles" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop3')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop3')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000</div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Los Robles, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 3D 2B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 120m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Los%20Robles%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
+    </div>
+</div>
 
                 <!-- Propiedad 4: Arriendo -->
                 <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="arriendo">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.photos/house/640x480/504" alt="Casa Colón" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$380.000 CLP</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Colón, Chillán</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Acogedora 3D 2B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 95m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Colón%20de%20$380.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop4" src="assets/img/propiedades/casa4/1.jpg" alt="Casa Los Robles" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop4')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop4')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000</div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Los Robles, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 3D 2B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 120m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Los%20Robles%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
+    </div>
+</div>
 
                 <!-- Propiedad 5: Venta -->
-                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-100" data-type="venta">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.photos/house/640x480/605" alt="Casa Mañío" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">1.890 UF</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Mañío, Chillán</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Nueva 3D 2B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 110m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Mañío%20de%201.890%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="venta">
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop5" src="assets/img/propiedades/casa5/1.jpg" alt="Casa Las Mariposas" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop5')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop5')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venta</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">2.450 UF</div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Las Mariposas, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 4D 3B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 140m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Las%20Mariposas%20de%202.450%20UF" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
+    </div>
+</div>
 
                 <!-- Propiedad 6: Arriendo -->
-                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal delay-200" data-type="arriendo">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.photos/house/640x480/706" alt="Casa El Roble" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$520.000 CLP</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>El Roble, Chillán</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Amplia Casa Familiar 4D 3B</h3>
-                        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
-                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
-                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
-                            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 130m²</span>
-                        </div>
-                        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20El%20Roble%20de%20$520.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">
-                            Consultar por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <div class="property-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 reveal" data-type="arriendo">
+    <div class="relative h-64 overflow-hidden">
+        <img id="prop6" src="assets/img/propiedades/casa6/1.jpg" alt="Casa Los Robles" class="w-full h-full object-cover transition-transform duration-700">
+        <button onclick="prevImage('prop6')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">‹</button>
+        <button onclick="nextImage('prop6')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black transition">›</button>
+        <div class="absolute top-4 left-4 bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Arriendo</div>
+        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-slate-900">$450.000</div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Los Robles, Chillán</span>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Casa Moderna 3D 2B</h3>
+        <div class="flex items-center gap-4 text-sm text-slate-600 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3</span>
+            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+            <span class="flex items-center gap-1"><i data-lucide="square" class="w-4 h-4"></i> 120m²</span>
+        </div>
+        <a href="https://wa.me/56982146977?text=Hola,%20me%20interesa%20la%20casa%20en%20Los%20Robles%20de%20$450.000" target="_blank" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-medium hover:bg-whatsapp hover:text-white transition-all">Consultar por WhatsApp</a>
+    </div>
+</div>
 
             <div class="mt-12 text-center reveal">
                 <a href="https://wa.me/56982146977?text=Hola,%20quiero%20ver%20más%20propiedades%20disponibles" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl">
@@ -633,6 +606,7 @@
 </body>
 
 </html>
+
 
 
 
