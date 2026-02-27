@@ -140,4 +140,9 @@ button:focus-visible {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
