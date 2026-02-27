@@ -207,6 +207,7 @@ const propertyImages = {
     prop3: ['assets/img/propiedades/casa3/1.jpg','assets/img/propiedades/casa3/2.jpg','assets/img/propiedades/casa3/3.jpg'], // arriendo
     prop4: ['assets/img/propiedades/casa4/1.jpg','assets/img/propiedades/casa4/2.jpg','assets/img/propiedades/casa4/3.jpg'], // arriendo
     prop5: ['assets/img/propiedades/casa5/1.jpg','assets/img/propiedades/casa5/2.jpg','assets/img/propiedades/casa5/3.jpg']  // venta
+    prop6: ['assets/img/propiedades/casa6/1.jpg','assets/img/propiedades/casa6/2.jpg','assets/img/propiedades/casa6/3.jpg'], // arriendo
 };
 
 // funciones del carrusel
@@ -223,3 +224,4 @@ function prevImage(id) {
     currentIndex[id] = (currentIndex[id] - 1 + images.length) % images.length;
     document.getElementById(id).src = images[currentIndex[id]];
 }
+
