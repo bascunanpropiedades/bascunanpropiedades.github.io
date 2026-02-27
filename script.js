@@ -67,14 +67,14 @@ function filterProperties(type) {
     
     // Update active button
     buttons.forEach(btn => {
-
-        // Resetear estilos
-        btn.classList.remove(
-            'active',
-            'bg-black',
-            'text-white',
-            'text-slate-700'
-        );
+        if (btn.dataset.filter === type) {
+            btn.classList.add('active');
+            btn.classList.remove('bg-white', 'text-slate-600');
+        } else {
+            btn.classList.remove('active');
+            btn.classList.add('bg-white', 'text-slate-600');
+        }
+    });
 
         btn.classList.add(
             'bg-white',
@@ -277,5 +277,6 @@ function prevImage(id) {
     }
     showImage(id);
 }
+
 
 
