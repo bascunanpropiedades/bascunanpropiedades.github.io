@@ -197,31 +197,40 @@ window.addEventListener('resize', () => {
 console.log('%c🏠 Bascuñan Propiedades', 'font-size: 20px; font-weight: bold; color: #0f172a;');
 
 console.log('%c¿Buscas vender o arrendar en Chillán? ¡Contáctanos!', 'font-size: 14px; color: #64748b;');
-// indices actuales por propiedad
-const currentIndex = {};
+<script>
+  // Define un objeto con el número de imágenes de cada propiedad
+  const propertyImages = {
+    prop1: 3, // casa1 tiene 3 imágenes: 1.jpg, 2.jpg, 3.jpg
+    prop2: 3, // casa2
+    prop3: 3, // casa3
+    prop4: 3, // casa4
+    prop5: 3, // casa5
+    prop6: 3  // casa6
+  };
 
-// rutas de imágenes por propiedad
-const propertyImages = {
-    prop1: ['assets/img/propiedades/casa1/1.jpg','assets/img/propiedades/casa1/2.jpg','assets/img/propiedades/casa1/3.jpg'], // venta
-    prop2: ['assets/img/propiedades/casa2/1.jpg','assets/img/propiedades/casa2/2.jpg','assets/img/propiedades/casa2/3.jpg'], // arriendo
-    prop3: ['assets/img/propiedades/casa3/1.jpg','assets/img/propiedades/casa3/2.jpg','assets/img/propiedades/casa3/3.jpg'], // arriendo
-    prop4: ['assets/img/propiedades/casa4/1.jpg','assets/img/propiedades/casa4/2.jpg','assets/img/propiedades/casa4/3.jpg'], // arriendo
-    prop5: ['assets/img/propiedades/casa5/1.jpg','assets/img/propiedades/casa5/2.jpg','assets/img/propiedades/casa5/3.jpg']  // venta
-    prop6: ['assets/img/propiedades/casa6/1.jpg','assets/img/propiedades/casa6/2.jpg','assets/img/propiedades/casa6/3.jpg'], // arriendo
-};
+  // Mantiene el índice actual de cada propiedad
+  const currentIndex = {
+    prop1: 1,
+    prop2: 1,
+    prop3: 1,
+    prop4: 1,
+    prop5: 1,
+    prop6: 1
+  };
 
-// funciones del carrusel
-function nextImage(id) {
-    if (!currentIndex[id]) currentIndex[id] = 0;
-    const images = propertyImages[id];
-    currentIndex[id] = (currentIndex[id] + 1) % images.length;
-    document.getElementById(id).src = images[currentIndex[id]];
-}
+  function nextImage(propId) {
+    const max = propertyImages[propId];
+    currentIndex[propId]++;
+    if (currentIndex[propId] > max) currentIndex[propId] = 1;
+    document.getElementById(propId).src = `assets/img/propiedades/${propId.replace('prop','casa')}/${currentIndex[propId]}.jpg`;
+  }
 
-function prevImage(id) {
-    if (!currentIndex[id]) currentIndex[id] = 0;
-    const images = propertyImages[id];
-    currentIndex[id] = (currentIndex[id] - 1 + images.length) % images.length;
-    document.getElementById(id).src = images[currentIndex[id]];
-}
+  function prevImage(propId) {
+    const max = propertyImages[propId];
+    currentIndex[propId]--;
+    if (currentIndex[propId] < 1) currentIndex[propId] = max;
+    document.getElementById(propId).src = `assets/img/propiedades/${propId.replace('prop','casa')}/${currentIndex[propId]}.jpg`;
+  }
+</script>
+
 
