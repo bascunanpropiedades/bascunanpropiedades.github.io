@@ -66,13 +66,35 @@ function filterProperties(type) {
     const buttons = document.querySelectorAll('.filter-btn');
     
     // Update active button
-buttons.forEach(btn => {
+    buttons.forEach(btn => {
 
-    btn.classList.remove(
-        'active',
-        'bg-black',
-        'text-white'
-    );
+        // Resetear estilos
+        btn.classList.remove(
+            'active',
+            'bg-black',
+            'text-white',
+            'text-slate-700'
+        );
+
+        btn.classList.add(
+            'bg-white',
+            'text-slate-700'
+        );
+
+        // Activar el botón correcto
+        if (btn.dataset.filter === type) {
+            btn.classList.add(
+                'active',
+                'bg-black',
+                'text-white'
+            );
+
+            btn.classList.remove(
+                'bg-white',
+                'text-slate-700'
+            );
+        }
+    });
 
     btn.classList.add(
         'bg-white',
@@ -255,4 +277,5 @@ function prevImage(id) {
     }
     showImage(id);
 }
+
 
